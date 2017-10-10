@@ -1,4 +1,7 @@
 {
     "name": "gvaldevieso/cqrs",
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {"CQRS\\": "src/"}
+    }
 }
