@@ -2,17 +2,24 @@
 
 namespace CQRS;
 
+use CQRS\VO\Product;
+
 class BasicCommand
 {
-	private $message;
+	private $product;
 
-	public function __construct(string $message)
+	public function __construct(Product $product)
 	{
-		$this->message = $message;
+		$this->product = $product;
 	}
 
-	public function getMessage() : string
+	public function getProductDescription()
 	{
-		return get_class()." diz: ".$this->message;
+		return "Description: " . $this->product->getDescription();
+	}
+
+	public function getProductPrice()
+	{
+		return "Price: R$ " . $this->product->getPrice();
 	}
 }

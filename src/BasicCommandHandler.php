@@ -8,6 +8,7 @@ class BasicCommandHandler implements CommandHandler
 {
 	public function handle($command)
 	{
-		echo $command->getMessage();
+		echo "Hello, we've an amazing product for you:\n";
+		echo $command->getProductDescription() . "!\n";
 	}
 }
